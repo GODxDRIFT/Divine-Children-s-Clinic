@@ -1,6 +1,9 @@
 export const CLINIC_DATA = {
   name: "Divine Children's Clinic",
   tagline: "Care for Cure",
+  hindiName: "डिवाइन चिल्ड्रन'स क्लिनिक (केयर फॉर कर)",
+  rating: "5.0",
+  reviews: "135",
   doctor: {
     name: "Dr. Aman Sharma",
     qualifications: "MBBS, MD Pediatrics (AIIMS)",
@@ -12,12 +15,12 @@ export const CLINIC_DATA = {
     bio: "Dedicated to providing compassionate and evidence-based care for children. Specializing in newborn care, vaccinations, and developmental monitoring."
   },
   contact: {
-    phone: "+91 98765 43210",
+    phone: "095994 65949",
     email: "info@divinechildrensclinic.com",
-    address: "Sector 12, Dwarka, New Delhi, India",
+    address: "E-12, Ground Floor, Block E, Lajpat Nagar I, Lajpat Nagar, New Delhi, Delhi 110024",
     mapsUrl: "https://maps.app.goo.gl/WmNSvUgMbZduAz128",
-    timings: "Mon–Sat 10AM–2PM, 5PM–8PM",
-    whatsapp: "https://wa.me/919876543210"
+    timings: "Mon–Sat 10:00 AM – 08:30 PM",
+    whatsapp: "https://wa.me/919599465949"
   },
   services: [
     { 
@@ -113,7 +116,7 @@ export const CLINIC_DATA = {
   ],
   testimonials: [
     { name: "Meera Kapoor", age: "4yr daughter", text: "Dr. Sharma is incredibly patient. He explained everything clearly without rushing.", rating: 5 },
-    { name: "Rahul Verma", age: "6m son", text: "The best pediatric clinic in Dwarka. The staff is friendly and the environment is very clean.", rating: 5 },
+    { name: "Rahul Verma", age: "6m son", text: "The best pediatric clinic in Lajpat Nagar. The staff is friendly and the environment is very clean.", rating: 5 },
     { name: "Anjali Gupta", age: "2yr son", text: "Highly recommend for vaccinations. They maintain a proper record and send reminders.", rating: 5 },
     { name: "Sanjay Dixit", age: "10yr son", text: "Excellent diagnosis. My son was suffering from persistent cough for weeks, cured in 3 days.", rating: 5 },
     { name: "Priya Singh", age: "NB twins", text: "Newborn care here is exceptional. Very supportive during our first month as parents.", rating: 5 },
@@ -139,7 +142,7 @@ export const CLINIC_DATA = {
     { q: "Do you provide home visit services?", a: "Currently, we only provide in-clinic consultations and tele-consultation support." },
     { q: "Is the clinic open on Sundays?", a: "The clinic is closed on Sundays, but available for emergencies via our helpline." },
     { q: "What vaccinations are available?", a: "We stock all NVS India recommended vaccines, including painless options." },
-    { q: "How do I reach the clinic from Dwarka Metro?", a: "We are located 5 minutes away from Sector 12 Metro Station by auto-rickshaw." },
+    { q: "How do I reach the clinic from the nearest Metro?", a: "We are located 5 minutes away from the Lajpat Nagar Metro Station by auto-rickshaw." },
     { q: "What is the consultation fee?", a: "Our standard consultation fee is ₹600. Follow-up visits within 3 days are free." }
   ]
 };

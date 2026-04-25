@@ -163,7 +163,7 @@ const AnnouncementBar = () => {
     <div className="relative w-full gradient-primary text-white py-3 overflow-hidden z-[60]">
       <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center">
         <marquee className="font-bold text-xs md:text-sm whitespace-nowrap tracking-wide leading-none">
-          📢 Free Vaccination Camp this Sunday! • New clinic timings: 10AM–2PM & 5PM–8PM • Next Patient Slot: Today • Welcoming new patients in Dwarka Sector 12
+          📢 Free Vaccination Camp this Sunday! • New clinic timings: {CLINIC_DATA.contact.timings} • Next Patient Slot: Today • Welcoming new patients in Lajpat Nagar I
         </marquee>
         <button 
           onClick={() => setIsVisible(false)}
@@ -219,8 +219,8 @@ const Hero = () => {
                 <span className="absolute -bottom-2 left-0 w-full h-3 bg-accent/20 -z-10 rounded-full" />
               </span>
             </h1>
-            <p className="text-lg md:text-xl text-text-muted max-w-2xl mx-auto lg:mx-0">
-              Expert pediatric care for newborns up to 18 years in the heart of Dwarka, New Delhi. Dedicated to your child's growth and well-being.
+            <p className="text-lg md:text-xl text-text-muted max-w-xl leading-relaxed">
+              Expert pediatric care for newborns up to 18 years in the heart of {CLINIC_DATA.contact.address.split(',')[4].trim()}, New Delhi. Dedicated to your child's growth and well-being.
             </p>
           </motion.div>
 
@@ -464,7 +464,7 @@ const DoctorProfile = () => {
 const HowItWorks = () => {
   const steps = [
     { title: "Book Appointment", desc: "Call us or fill the online form to select your preferred time slot.", icon: <Calendar size={32} /> },
-    { title: "Visit Clinic", desc: "Arrive at our child-friendly clinic in Dwarka for your scheduled visit.", icon: <MapPin size={32} /> },
+    { title: "Visit Clinic", desc: `Arrive at our child-friendly clinic in ${CLINIC_DATA.contact.address.split(',')[4].trim()} for your scheduled visit.`, icon: <MapPin size={32} /> },
     { title: "Expert Consultation", desc: "Get specialized medical attention and a clear plan for your child's health.", icon: <CheckCircle2 size={32} /> },
   ];
 
@@ -590,7 +590,7 @@ const Testimonials = () => {
               <Star size={16} fill="currentColor" />
               <Star size={16} fill="currentColor" />
             </div>
-            <span className="text-sm font-bold text-text-muted">4.9/5 on Google Maps</span>
+            <span className="text-sm font-bold text-text-muted">{CLINIC_DATA.rating}/5 on Google Maps ({CLINIC_DATA.reviews}+ Reviews)</span>
           </div>
         </div>
 
@@ -964,7 +964,7 @@ const AppointmentForm = () => {
 
             <div className="w-full h-80 rounded-[3rem] overflow-hidden shadow-2xl relative">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112081.714441584!2d76.9930198!3d28.5982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1ad3aa050bb7%3A0x6bbaec43b1897e9!2sDwarka%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1714045000000!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.1482087588147!2d77.2372!3d28.5658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3b700000001%3A0x0!2sLajpat%20Nagar%20I%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1714045000000!5m2!1sen!2sin"
                 className="w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-700" 
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -1036,7 +1036,7 @@ const Footer = () => {
             </div>
             <span className="font-heading font-extrabold text-2xl tracking-tight">Divine <span className="text-secondary">Children's</span></span>
           </div>
-          <p className="text-gray-400">Expert pediatric care for newborns up to 18 years. Trustworthy, compassionate, and affordable care in Dwarka.</p>
+          <p className="text-gray-400">Expert pediatric care for newborns up to 18 years. Trustworthy, compassionate, and affordable care in Lajpat Nagar.</p>
           <div className="flex gap-4">
             {['facebook', 'instagram', 'youtube', 'whatsapp'].map(s => (
               <a key={s} href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:gradient-primary transition-all">
@@ -1068,12 +1068,12 @@ const Footer = () => {
           <h4 className="text-xl font-bold">Clinic Hours</h4>
           <div className="space-y-3">
             <div className="flex justify-between border-b border-white/10 pb-2">
-              <span className="text-gray-400">Mon - Sat (Morn)</span>
-              <span className="font-bold">10AM - 2PM</span>
+              <span className="text-gray-400">{CLINIC_DATA.contact.timings.split(' ')[0]} (Morn)</span>
+              <span className="font-bold">10:00 AM - 02:00 PM</span>
             </div>
             <div className="flex justify-between border-b border-white/10 pb-2">
-              <span className="text-gray-400">Mon - Sat (Eve)</span>
-              <span className="font-bold">5PM - 8PM</span>
+              <span className="text-gray-400">{CLINIC_DATA.contact.timings.split(' ')[0]} (Eve)</span>
+              <span className="font-bold">05:00 PM - 08:30 PM</span>
             </div>
             <div className="flex justify-between">
               <span className="text-gray-400">Sunday</span>
