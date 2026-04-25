@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Nunito", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Poppins", sans-serif;
+  
+  --color-primary: #2563EB;
+  --color-secondary: #10B981;
+  --color-accent: #F59E0B;
+  --color-bg-soft: #F0F9FF;
+  --color-text-dark: #1E293B;
+  --color-text-muted: #64748B;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-soft text-text-dark antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+.gradient-primary {
+  background: linear-gradient(135deg, #2563EB 0%, #10B981 100%);
+}
+
+.blur-nav {
+  backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.particle {
+  position: absolute;
+  background: rgba(37, 99, 235, 0.1);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: bg-particle 20s linear infinite;
+}
+
+@keyframes bg-particle {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+  50% { opacity: 0.5; }
+  100% { transform: translateY(-1000px) rotate(360deg); opacity: 0; }
+}
